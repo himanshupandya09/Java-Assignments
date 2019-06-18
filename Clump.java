@@ -1,22 +1,21 @@
 
 import java.util.Scanner;
-public class Clump
+public class Clumps 
 {
 public static void main(String[] args)
 {
 	
 	int clumps=0;
 	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter length of Array:");
-	int n= sc.nextInt();
+	
 	int a[]=new int[10];
 	System.out.println("Enter elements of Array:");
 	
-	for(int i=0;i<n;i++)
+	for(int i=0;i<10;i++)
 	{
 		a[i]=sc.nextInt();
 	}
-	for(int i=0;i<n;i++)
+	for(int i=0;i<10;i++)
 	{
 		int j=i+1;
 		if(a[i]==a[j])
@@ -24,14 +23,14 @@ public static void main(String[] args)
 			clumps++;
 			while((a[i]==a[j]))
 				{
-				if(j==--n)
+				if(j==9)
 					break;
 				j++;
 				
 				}
 		}
 		i=j-1;
-		if(i==--n)
+		if(i==8)
 			break;
 		
 		
